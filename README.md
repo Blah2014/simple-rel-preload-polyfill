@@ -5,7 +5,7 @@ Help solve loading CSS blocking in PageSpeed Insights
 <script>
     //
     // rel="preload" polyfill ignore if browser Chrome
-    if(/chrome/i.test(window.navigator.userAgent)) {
+    if(!/chrome/i.test(window.navigator.userAgent)) {
         try {
             document.createElement('link').relList.supports('preload');
         } catch (error) {
